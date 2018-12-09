@@ -8,17 +8,15 @@ Configure uma estrutura ReactJS do zero com Babel, Webpack e Webpack Dev Server.
 
 1. Criar o repositório no `github`
 
-`https://imgur.com/a/kULjyKT`
+![New Repository](https://imgur.com/a/kULjyKT)
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/kULjyKT"><a href="//imgur.com/kULjyKT"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-
-`https://imgur.com/a/yy0826B`
-
-<blockquote class="imgur-embed-pub" lang="en" data-id="VitiUBx"><a href="//imgur.com/VitiUBx"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![Repository Created](https://imgur.com/a/yy0826B)
 
 Url: `https://github.com/farnetani/goreact-desafio-01`
 
 SSH: `git@github.com:farnetani/goreact-desafio-01.git`
+
+:clap:
 
 2. Criar o diretório
 
