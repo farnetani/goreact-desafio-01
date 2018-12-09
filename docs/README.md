@@ -212,16 +212,6 @@ Abrir o navegador e carregar: http://localhost:8080
 Result deve ser: Hello World
 ```
 
-**Para baixar a estrutura do zero acima mencionada, basta digitar:**
-
-```
-git clone git@github.com:farnetani/goreact-desafio-01.git -b estrutura-inicial
-
-yarn
-```
-
-Agora mãos na massa!
-
 14. Melhorando o nosso `.eslintrc.json`
 
 - Vamos instalar a dependência:
@@ -281,3 +271,12 @@ Havia me esquecido da dependência abaixo do eslint
 yarn add eslint-plugin-jsx-a11y
 ```
 
+**Para baixar a estrutura do zero acima mencionada, basta digitar:**
+
+```
+git clone git@github.com:farnetani/goreact-desafio-01.git -b estrutura-inicial-oficial
+
+yarn
+```
+
+Agora mãos na massa!
