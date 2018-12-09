@@ -221,3 +221,40 @@ yarn
 ```
 
 Agora mãos na massa!
+
+14. Melhorando o nosso `.eslintrc.json`
+
+- Vamos instalar a dependência:
+
+```
+ yarn add babel-eslint@8 -D
+```
+
+- Refatorando o nosso `.eslintrc.json`
+
+```json
+{
+  "parser": "babel-eslint",
+  "extends": "standard",
+  "env": {
+    "browser": true,
+    "jest": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      "error",
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "global-require": "off",
+    "import/prefer-default-export": "off",
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  }
+}
+```
