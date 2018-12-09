@@ -61,6 +61,8 @@ yarn add react react-dom
 ## Lib prop-types para fazermos uma tipagem dentro do nosso código
 yarn add prop-types
 
+## SASS
+yarn add css-loader node-sass sass-loader style-loader -D
 ```
 
 Devemos ter algo conforme o nosso `package.json` abaixo:
@@ -71,18 +73,25 @@ Devemos ter algo conforme o nosso `package.json` abaixo:
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development"
+  },
   "devDependencies": {
     "@babel/core": "^7.2.0",
     "@babel/plugin-proposal-class-properties": "^7.2.1",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "css-loader": "^2.0.0",
     "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
     "webpack": "^4.27.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
@@ -115,4 +124,90 @@ end_of_line = 'lf'
 {
   "extends": "standard"
 }
+```
+
+8. Criar o arquivo `webpack.config.js` na raiz do projeto
+
+```js
+const path = require('path')
+
+module.exports = {
+  entry: path.resolve(__dirname, 'src', 'index.js'),
+  output: {
+    path: path.resolve(__dirname, 'public'),
+    filename: 'bundle.js'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/, // Aqui uso uma expressão regular
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader'
+        }
+      }
+    ]
+  }
+}
+```
+
+9. Criar o arquivo `.babelrc`
+
+```js
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": ["@babel/plugin-proposal-class-properties"]
+}
+
+```
+
+10. Configurar o script `dev` da aplicação no `package.json`
+
+```json
+  "scripts": {
+    "dev": "webpack-dev-server --mode development"
+  },
+```
+
+11. Criar a pasta `public` e dentro dela o arquivo `index.html` referenciando o nosso `bundle.js`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Desafio-01</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./bundle.js"></script>
+  </body>
+</html>
+```
+
+12. Criar a pasta `src` do projeto e o arquivo `index.js` dentro dela:
+
+```js
+import React, { Component } from 'react'
+import { render } from 'react-dom'
+
+class App extends Component {
+  render() {
+    return <h1>Hello World</h1>
+  }
+}
+
+render(<App />, document.getElementById('app'))
+```
+
+13. Testar se a aplicação está rodando
+
+```
+yarn run dev
+
+Abrir o navegador e carregar: http://localhost:8080
+
+Result deve ser: Hello World
 ```
