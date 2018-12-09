@@ -224,29 +224,31 @@ Result deve ser: Hello World
 
 ```json
 {
-  "parser": "babel-eslint",
-  "extends": "standard",
-  "env": {
-    "browser": true,
-    "jest": true
-  },
-  "rules": {
-    "react/jsx-filename-extension": [
-      "error",
-      {
-        "extensions": [".js", ".jsx"]
-      }
-    ],
-    "global-require": "off",
-    "import/prefer-default-export": "off",
-    "no-unused-vars": [
-      "error",
-      {
-        "argsIgnorePattern": "^_"
-      }
-    ]
-  }
+	"parser": "babel-eslint",
+	"extends": ["standard", "standard-react"],
+	"env": {
+		"browser": true,
+		"jest": true
+	},
+	"plugins": ["react", "jsx-a11y", "import"],
+	"rules": {
+		"react/jsx-filename-extension": [
+			"error",
+			{
+				"extensions": [".js", ".jsx"]
+			}
+		],
+		"global-require": "off",
+		"import/prefer-default-export": "off",
+		"no-unused-vars": [
+			"error",
+			{
+				"argsIgnorePattern": "^_"
+			}
+		]
+	}
 }
+
 ```
 
 15. Adicionando o `prettier-eslint` ao projeto
