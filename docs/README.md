@@ -258,3 +258,26 @@ Agora mãos na massa!
   }
 }
 ```
+
+15. Adicionando o `prettier-eslint` ao projeto
+
+```
+yarn add prettier-eslint -D
+```
+
+14. Melhorando o nosso `eslint` para trabalhar com o `react`
+
+url: `https://github.com/standard/eslint-config-standard-react`
+
+Devemos instalar as dependências abaixo e depois declarar o `standard-react` no extends do `.eslint.json`:
+
+```
+yarn add -D eslint-config-standard eslint-config-standard-react eslint-plugin-standard eslint-plugin-promise eslint-plugin-import eslint-plugin-node eslint-plugin-react
+```
+
+Havia me esquecido da dependência abaixo do eslint
+
+```
+yarn add eslint-plugin-jsx-a11y
+```
+
