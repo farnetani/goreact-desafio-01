@@ -94,3 +94,25 @@ Devemos ter algo conforme o nosso `package.json` abaixo:
   }
 }
 ```
+
+6. Criar o arquivo `.editorconfig` na raiz do projeto
+
+```js
+root = true
+
+[*]
+ident_style = space
+ident_size = 2
+charset = utf-8
+trim_Trailing_whitespace = true
+insert_final_newline = true
+end_of_line = 'lf'
+```
+
+7. Criar o arquivo `.eslintrc.json` na raiz do projeto
+
+```json
+{
+  "extends": "standard"
+}
+```
