@@ -25,8 +25,7 @@ componente de Post quando realizar o map no state de posts: ;
 
 Esse desafio não precisa ser entregue e não receberá correção, mas você pode ver o resultado do código do desafio feito por mim aqui:
 
-https://github.com/Rocketseat/bootcamp-re
-actjs-desafio-01
+`https://github.com/Rocketseat/bootcamp-reactjs-desafio-01`
 
 PS.: Tente fazer o desafio sem olhar o código antes :)
 
