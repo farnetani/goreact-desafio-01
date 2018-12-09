@@ -5,9 +5,7 @@ Configure uma estrutura ReactJS do zero com Babel, Webpack e Webpack Dev Server.
 Nesse projeto você desenvolverá um feed de posts estilo Facebook. Crie um layout tentando
 chegar o mais próximo possível da imagem abaixo:
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/0yXqBJC"><a href="//imgur.com/0yXqBJC"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
-
-url: `https://imgur.com/a/0yXqBJC`
+![Desafio](https://i.imgur.com/OGgmzYd.png)
 
 ## Regras
 
