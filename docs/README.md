@@ -215,7 +215,7 @@ Result deve ser: Hello World
 **Para baixar a estrutura do zero acima mencionada, basta digitar:**
 
 ```
-git clone git@github.com:farnetani/goreact-desafio-01.git -b estrutura-inicial-do-projeto
+git clone git@github.com:farnetani/goreact-desafio-01.git -b estrutura-inicial
 
 yarn
 ```
