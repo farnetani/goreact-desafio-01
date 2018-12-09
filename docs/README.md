@@ -216,6 +216,7 @@ Result deve ser: Hello World
 
 ```
 git clone git@github.com:farnetani/goreact-desafio-01.git -b estrutura-inicial-do-projeto
+
 yarn
 ```
 
