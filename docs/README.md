@@ -245,9 +245,13 @@ Result deve ser: Hello World
 			{
 				"argsIgnorePattern": "^_"
 			}
-		]
+		],
+		"indent": [2, "tab"],
+		"no-tabs": "off",
+		"react/jsx-indent": [2, 0]
 	}
 }
+
 
 ```
 
@@ -257,7 +261,7 @@ Result deve ser: Hello World
 yarn add prettier-eslint -D
 ```
 
-14. Melhorando o nosso `eslint` para trabalhar com o `react`
+16. Melhorando o nosso `eslint` para trabalhar com o `react`
 
 url: `https://github.com/standard/eslint-config-standard-react`
 
@@ -282,3 +286,107 @@ yarn
 ```
 
 Agora mãos na massa!
+
+### Desafio
+
+01. Criar a estrutura de pastas do projeto
+```
+|--src
+   components
+   styles
+```
+
+02. Criar o arquivo `app.scss` da aplicação
+```scss
+body {
+  margin: 0;
+  padding: 0;
+  background: #e9ebee;
+  font-family: sans-serif;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+.header {
+  background: #4267b2;
+  border-bottom: 1px solid #29487d;
+  height: 60px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    font-size: 20px;
+    color: #ffffff;
+  }
+}
+
+.post-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  width: 700px;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-top: 30px;
+
+  .post-header-container {
+    display: flex;
+    align-items: center;
+
+    .avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+    }
+
+    .data-container {
+      margin-left: 10px;
+
+      display: flex;
+      flex-direction: column;
+
+      strong {
+        font-size: 16px;
+        color: #666666;
+      }
+
+      span {
+        font-size: 14px;
+        color: #999999;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  p {
+    font-size: 16px;
+    color: #333333;
+    line-height: 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+  }
+}
+```
+
+03. Um ponto importante no `standard-react` é que ele acusa erros de identação no código `jsx`, para evitar isso, seguir a referência do link: `https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md`, editando o arquivo `.eslintrc.json` e colocando as seguintes regras em `rules`:
+
+```json
+		"indent": [2, "tab"],
+		"no-tabs": "off",
+		"react/jsx-indent": [2, 0]
+```

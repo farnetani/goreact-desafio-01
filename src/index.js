@@ -1,10 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { render } from 'react-dom'
+import App from './components/App'
 
-class App extends Component {
-  render () {
-    return <h1>Hello World</h1>
-  }
-}
+import './styles/app.scss'
 
 render(<App />, document.getElementById('app'))

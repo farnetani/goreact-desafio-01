@@ -20,6 +20,9 @@
 			{
 				"argsIgnorePattern": "^_"
 			}
-		]
+		],
+		"indent": [2, "tab"],
+		"no-tabs": "off",
+		"react/jsx-indent": [2, 0]
 	}
 }
